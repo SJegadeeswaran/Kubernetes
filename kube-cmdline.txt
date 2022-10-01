@@ -3,3 +3,5 @@ kubectl get pods -n <namespace-name>
 kubectl get nodes
 kubectl get svc
 kubectl get deployment
+kubectl create secret generic regcred --from-file=.dockerconfigjson=<path/to/.docker/config.json> --type=kubernetes.io/dockerconfigjson
+kubectl --kubeconfig "/home/vm-user/xxx/xxx" create secret docker-registry dockercred4 --docker-server=xxx.azurecr.io --docker-username=xxx --docker-password=xxx
