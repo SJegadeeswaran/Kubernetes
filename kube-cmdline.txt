@@ -1,0 +1,5 @@
+kubectl create configmap create-db-configmap --from-file=./init-mongo.js
+kubectl get pods -n <namespace-name>
+kubectl get nodes
+kubectl get svc
+kubectl get deployment
