@@ -12,9 +12,10 @@ kubectl create configmap xmlfile --from-file=/home/xxx/filename.xml
 kubectl get configmap
 kubectl describe configmap configmapname
 kubectl create namespace <namespace-name>
-kubectl get pods -n fednow-dev mongo-deployment-5dfddf9b8f-f7cz7 -o jsonpath="Name: {.metadata.name} Status: {.status.phase}"
-kubectl get pods -o=name --field-selector=status.phase=Running -n fednow-dev
+kubectl get pods -n <namespace-name> mongo-xxxx -o jsonpath="Name: {.metadata.name} Status: {.status.phase}"
+kubectl get pods -o=name --field-selector=status.phase=Running -n <namespace-name>
 kubectl rollout restart deployment my-dep (to restart the deployment)
-kubectl top node
+kubectl top nodes
 kubectl top pods
-kubectl get po,svc -n fednow-dev
+kubectl get po,svc,deployment -n <namespace-name>
+kubectl get all -n <namespace-name>
