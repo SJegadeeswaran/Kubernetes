@@ -19,3 +19,5 @@ kubectl top nodes
 kubectl top pods
 kubectl get po,svc,deployment -n <namespace-name>
 kubectl get all -n <namespace-name>
+
+ssh -i filename.pem username@xxx.xxx.xxx.xxx -L 8080:xx.xxx.x.xxx:8080 -L 8161:xx.xxx.xx.xx:8161 (exposing the application URL using port forwarding in kubernetes) - Can be logged using http://localhost:8080
